@@ -51,8 +51,21 @@
 //     digit == 0
 // }
 
+// fn main() {
+//     let mut num = 5;
+//     num = 3;
+//     println!("{}", num);
+// }
+
 fn main() {
-    let mut num = 5;
-    num = 3;
-    println!("{}", num);
+    let arr = [0, 1, 2, 3];
+    let slice = &arr[1..3];
+    borrowing_slice(arr, slice);
+}
+
+fn borrowing_slice(arr: [u8; 4], slice: &[u8]) {
+    println!("{:?}", arr);
+    println!("{:?}", slice);
+    println!("length: {}", slice.len());
+    println!("{} {}", slice[0], slice[1]);
 }
