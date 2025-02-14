@@ -30,14 +30,23 @@
 //     println!("{:?}", other_arr);
 // }
 
+// fn main() {
+//     let tuple: (u8, bool, f32) = (5, true, 2.1);
+//     let tuple2 = (3, 5);
+//
+//     println!("first {}, second {}, third {}", tuple.0, tuple.1, tuple.2);
+//     println!("{:?}", tuple2);
+//
+//     let (a, b, c) = tuple;
+//
+//     println!("first {}, second {}, third {}", a, b, c);
+// }
+
 fn main() {
-    let tuple: (u8, bool, f32) = (5, true, 2.1);
-    let tuple2 = (3, 5);
+    println!("{}", is_even(2));
+}
 
-    println!("first {}, second {}, third {}", tuple.0, tuple.1, tuple.2);
-    println!("{:?}", tuple2);
-
-    let (a, b, c) = tuple;
-
-    println!("first {}, second {}, third {}", a, b, c);
+pub fn is_even(num: u8) -> bool {
+    let digit: u8 = num % 2;
+    digit == 0
 }
