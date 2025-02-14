@@ -21,11 +21,23 @@
 //     println!("isTrue: {}", is_true);
 // }
 
+// fn main() {
+//     let arr: [u8; 3] = [1, 2, 3];
+//     let other_arr: [u8; 5] = [100; 5];
+//
+//     println!("index: {}, length {}", arr[0], other_arr.len());
+//
+//     println!("{:?}", other_arr);
+// }
+
 fn main() {
-    let arr: [u8; 3] = [1, 2, 3];
-    let other_arr: [u8; 5] = [100; 5];
+    let tuple: (u8, bool, f32) = (5, true, 2.1);
+    let tuple2 = (3, 5);
 
-    println!("index: {}, length {}", arr[0], other_arr.len());
+    println!("first {}, second {}, third {}", tuple.0, tuple.1, tuple.2);
+    println!("{:?}", tuple2);
 
-    println!("{:?}", other_arr);
+    let (a, b, c) = tuple;
+
+    println!("first {}, second {}, third {}", a, b, c);
 }
