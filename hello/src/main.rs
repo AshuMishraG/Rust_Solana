@@ -1,8 +1,12 @@
+// Hello world
+
 // fn main() {
 //     let a = 10;
 //     let b = 15;
 //     println!("Hello, world!, {} {}", a, b);
 // }
+
+// First Build
 
 // fn main() {
 //     let unsigned: u8 = 10;
@@ -21,6 +25,8 @@
 //     println!("isTrue: {}", is_true);
 // }
 
+// Array
+
 // fn main() {
 //     let arr: [u8; 3] = [1, 2, 3];
 //     let other_arr: [u8; 5] = [100; 5];
@@ -29,6 +35,8 @@
 //
 //     println!("{:?}", other_arr);
 // }
+
+// Tuple
 
 // fn main() {
 //     let tuple: (u8, bool, f32) = (5, true, 2.1);
@@ -42,6 +50,8 @@
 //     println!("first {}, second {}, third {}", a, b, c);
 // }
 
+// Function
+
 // fn main() {
 //     println!("{}", is_even(2));
 // }
@@ -51,11 +61,15 @@
 //     digit == 0
 // }
 
+// Mutable Function
+
 // fn main() {
 //     let mut num = 5;
 //     num = 3;
 //     println!("{}", num);
 // }
+
+// Slice
 
 // fn main() {
 //     let arr = [0, 1, 2, 3];
@@ -70,6 +84,8 @@
 //     println!("{} {}", slice[0], slice[1]);
 // }
 
+// String
+
 // fn main() {
 //     let str: &str = "hello world";
 //     let mut string: String = String::from("Hello world");
@@ -83,13 +99,35 @@
 //     println!("{}", string);
 // }
 
+// For loop
+
+// fn main() {
+//     let n = 3;
+//     if n > 0 {
+//         println!("greater than 0");
+//     } else if n < 0 {
+//         println!("less than 0");
+//     } else {
+//         println!("is 0");
+//     }
+// }
+
+// fn main() {
+//     for i in 0..6 {
+//         println!("{}", i);
+//     }
+// }
+
+// While loop
+
 fn main() {
-    let n = 3;
-    if n > 0 {
-        println!("greater than 0");
-    } else if n < 0 {
-        println!("less than 0");
-    } else {
-        println!("is 0");
+    let mut i = 0;
+    while i < 4 {
+        println!("{}", i);
+        i += 1;
+        if i == 3 {
+            println!("exit");
+            break;
+        }
     }
 }
