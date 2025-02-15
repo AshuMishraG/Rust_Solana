@@ -132,14 +132,33 @@
 //     }
 // }
 
+// Match
+
+// fn main() {
+//     let i = 4;
+//     match i {
+//         0 => println!("0"),
+//         1 | 2 => println!("1,2"),
+//         3..=4 => println!("3,4"),
+//         _ => println!("default"),
+//     }
+// }
+
 //
 
 fn main() {
-    let i = 4;
-    match i {
-        0 => println!("0"),
-        1 | 2 => println!("1,2"),
-        3..=4 => println!("3,4"),
-        _ => println!("default"),
+    let name = String::from("Bird");
+    let bird = Bird { name, attack: 5 };
+    bird.print_name();
+}
+
+struct Bird {
+    name: String,
+    attack: u64,
+}
+
+impl Bird {
+    fn print_name(&self) {
+        println!("{}", self.name);
     }
 }
