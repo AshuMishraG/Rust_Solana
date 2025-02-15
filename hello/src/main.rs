@@ -57,15 +57,28 @@
 //     println!("{}", num);
 // }
 
-fn main() {
-    let arr = [0, 1, 2, 3];
-    let slice = &arr[1..3];
-    borrowing_slice(arr, slice);
-}
+// fn main() {
+//     let arr = [0, 1, 2, 3];
+//     let slice = &arr[1..3];
+//     borrowing_slice(arr, slice);
+// }
+//
+// fn borrowing_slice(arr: [u8; 4], slice: &[u8]) {
+//     println!("{:?}", arr);
+//     println!("{:?}", slice);
+//     println!("length: {}", slice.len());
+//     println!("{} {}", slice[0], slice[1]);
+// }
 
-fn borrowing_slice(arr: [u8; 4], slice: &[u8]) {
-    println!("{:?}", arr);
-    println!("{:?}", slice);
-    println!("length: {}", slice.len());
-    println!("{} {}", slice[0], slice[1]);
+fn main() {
+    let str: &str = "hello world";
+    let mut string: String = String::from("Hello world");
+
+    let slice = &string[..6];
+    slice.len();
+
+    string.push('1');
+    string.push_str("! Bob");
+    string = string.replace("Hello", "Bye");
+    println!("{}", string);
 }
