@@ -70,15 +70,26 @@
 //     println!("{} {}", slice[0], slice[1]);
 // }
 
+// fn main() {
+//     let str: &str = "hello world";
+//     let mut string: String = String::from("Hello world");
+//
+//     let slice = &string[..6];
+//     slice.len();
+//
+//     string.push('1');
+//     string.push_str("! Bob");
+//     string = string.replace("Hello", "Bye");
+//     println!("{}", string);
+// }
+
 fn main() {
-    let str: &str = "hello world";
-    let mut string: String = String::from("Hello world");
-
-    let slice = &string[..6];
-    slice.len();
-
-    string.push('1');
-    string.push_str("! Bob");
-    string = string.replace("Hello", "Bye");
-    println!("{}", string);
+    let n = 3;
+    if n > 0 {
+        println!("greater than 0");
+    } else if n < 0 {
+        println!("less than 0");
+    } else {
+        println!("is 0");
+    }
 }
