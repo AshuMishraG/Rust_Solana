@@ -165,36 +165,54 @@
 
 // Traits (interfaces)
 
+// fn main() {
+//     let name = String::from("Bird");
+//     let bird = Bird { name, attack: 5 };
+//     bird.print_name();
+//     println!("{} {}", bird.can_fly(), bird.is_animal());
+// }
+//
+// struct Bird {
+//     name: String,
+//     attack: u64,
+// }
+//
+// impl Bird {
+//     fn print_name(&self) {
+//         println!("{}", self.name);
+//     }
+// }
+//
+// impl Animal for Bird {
+//     fn can_fly(&self) -> bool {
+//         true
+//     }
+//     fn is_animal(&self) -> bool {
+//         false
+//     }
+// }
+//
+// trait Animal {
+//     fn can_fly(&self) -> bool;
+//     fn is_animal(&self) -> bool {
+//         true
+//     }
+// }
+
+// Enum
+
 fn main() {
-    let name = String::from("Bird");
-    let bird = Bird { name, attack: 5 };
-    bird.print_name();
-    println!("{} {}", bird.can_fly(), bird.is_animal());
+    let a: MyEnum = MyEnum::A;
+    let b: MyEnum = MyEnum::B(5);
+    let c: MyEnum = MyEnum::C { x: 10, y: 20 };
+    println!("{:?}", a);
+    println!("{:?}", b);
+    println!("{:?}", c);
 }
 
-struct Bird {
-    name: String,
-    attack: u64,
-}
-
-impl Bird {
-    fn print_name(&self) {
-        println!("{}", self.name);
-    }
-}
-
-impl Animal for Bird {
-    fn can_fly(&self) -> bool {
-        true
-    }
-    fn is_animal(&self) -> bool {
-        false
-    }
-}
-
-trait Animal {
-    fn can_fly(&self) -> bool;
-    fn is_animal(&self) -> bool {
-        true
-    }
+#[derive(Debug)]
+enum MyEnum {
+    A,
+    B(i32),
+    C { x: i32, y: i32 },
 }
