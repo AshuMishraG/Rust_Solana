@@ -262,19 +262,55 @@
 
 // Options
 
-fn divide(dividend: i32, divisor: i32) -> Option<i32> {
-    if dividend % divisor != 0 {
-        None
+// fn divide(dividend: i32, divisor: i32) -> Option<i32> {
+//     if dividend % divisor != 0 {
+//         None
+//     } else {
+//         Some(dividend / divisor)
+//     }
+// }
+//
+// fn main() {
+//     let divide1: Option<i32> = divide(4, 2);
+//     let divide2: Option<i32> = divide(2, 3);
+//
+//     println!("{:?} unwraps to {}", divide1, divide1.unwrap());
+//
+//     // println!("{:?} unwraps to {}", divide2, divide2.unwrap());
+// }
+
+//  Results
+
+use std::{fmt::Result, i32};
+
+#[derive(Debug)]
+enum MyError {
+    Error1,
+}
+
+fn divide(divident: i32, divisor: i32) -> std::result::Result<i32, MyError> {
+    if divident % divisor != 0 {
+        Err(MyError::Error1)
     } else {
-        Some(dividend / divisor)
+        Ok(divident / divisor)
     }
 }
 
 fn main() {
-    let divide1: Option<i32> = divide(4, 2);
-    let divide2: Option<i32> = divide(2, 3);
+    let divide = divide(3, 2);
 
-    println!("{:?} unwraps to {}", divide1, divide1.unwrap());
+    // match divide {
+    //     Ok(v) => println!("{}", v),
+    //     Err(v) => println!("{:?}", v),
+    // }
+    //
+    // if divide.is_ok() {
+    //     println!("{}", divide.unwrap());
+    // }
+    //
+    // println!("{}", divide.unwrap());
 
-    // println!("{:?} unwraps to {}", divide2, divide2.unwrap());
+    println!("{}", divide.unwrap_or(400));
+
+    // println!("{}", res);
 }
