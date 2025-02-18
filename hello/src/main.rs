@@ -239,23 +239,42 @@
 
 // Hash Maps
 
-use std::collections::HashMap;
+// use std::collections::HashMap;
+// fn main() {
+//     let mut map = HashMap::new();
+//     map.insert(0, "H1");
+//     map.insert(1, "H2");
+//     println!("{:?}", map);
+//
+//     match map.get(&0) {
+//         Some(str) => println!("{}", str),
+//         None => println!("Dosn't exist in map"),
+//     }
+//
+//     match map.get(&2) {
+//         Some(str) => println!("{}", str),
+//         _ => println!("Dosn't exist in map"),
+//     }
+//
+//     map.remove(&0);
+//     println!("{:?}", map);
+// }
+
+// Options
+
+fn divide(dividend: i32, divisor: i32) -> Option<i32> {
+    if dividend % divisor != 0 {
+        None
+    } else {
+        Some(dividend / divisor)
+    }
+}
+
 fn main() {
-    let mut map = HashMap::new();
-    map.insert(0, "H1");
-    map.insert(1, "H2");
-    println!("{:?}", map);
+    let divide1: Option<i32> = divide(4, 2);
+    let divide2: Option<i32> = divide(2, 3);
 
-    match map.get(&0) {
-        Some(str) => println!("{}", str),
-        None => println!("Dosn't exist in map"),
-    }
+    println!("{:?} unwraps to {}", divide1, divide1.unwrap());
 
-    match map.get(&2) {
-        Some(str) => println!("{}", str),
-        _ => println!("Dosn't exist in map"),
-    }
-
-    map.remove(&0);
-    println!("{:?}", map);
+    // println!("{:?} unwraps to {}", divide2, divide2.unwrap());
 }
