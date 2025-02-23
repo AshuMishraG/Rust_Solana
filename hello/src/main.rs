@@ -281,36 +281,36 @@
 
 //  Results
 
-use std::{fmt::Result, i32};
-
-#[derive(Debug)]
-enum MyError {
-    Error1,
-}
-
-fn divide(divident: i32, divisor: i32) -> std::result::Result<i32, MyError> {
-    if divident % divisor != 0 {
-        Err(MyError::Error1)
-    } else {
-        Ok(divident / divisor)
-    }
-}
-
-fn main() {
-    let divide = divide(3, 2);
-
-    // match divide {
-    //     Ok(v) => println!("{}", v),
-    //     Err(v) => println!("{:?}", v),
-    // }
-    //
-    // if divide.is_ok() {
-    //     println!("{}", divide.unwrap());
-    // }
-    //
-    // println!("{}", divide.unwrap());
-
-    println!("{}", divide.unwrap_or(400));
-
-    // println!("{}", res);
-}
+// use std::{fmt::Result, i32};
+//
+// #[derive(Debug)]
+// enum MyError {
+//     Error1,
+// }
+//
+// fn divide(divident: i32, divisor: i32) -> std::result::Result<i32, MyError> {
+//     if divident % divisor != 0 {
+//         Err(MyError::Error1)
+//     } else {
+//         Ok(divident / divisor)
+//     }
+// }
+//
+// fn main() {
+//     let divide = divide(3, 2);
+//
+//     // match divide {
+//     //     Ok(v) => println!("{}", v),
+//     //     Err(v) => println!("{:?}", v),
+//     // }
+//     //
+//     // if divide.is_ok() {
+//     //     println!("{}", divide.unwrap());
+//     // }
+//     //
+//     // println!("{}", divide.unwrap());
+//
+//     println!("{}", divide.unwrap_or(400));
+//
+//     // println!("{}", res);
+// }
